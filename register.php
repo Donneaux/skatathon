@@ -4,9 +4,7 @@
 	?>
 		<ul>
 		<?php
-			print("SELECT skater_name FROM `registration` where event_name='".$event."'");
-			print("ben");
-			foreach (mysqli_query($link, "SELECT skater_name FROM `registration` where event_name='".$event."'") as $row) {
+			foreach (mysqli_query($link, "SELECT skater_num, name as skater_name FROM `registration` join skater on skater.num = skater_num where event_num='".$event."'") as $row) {
 				?>
 					<li>
 						<?= $row['skater_name'] ?>
