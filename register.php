@@ -1,19 +1,20 @@
 <?php
 	require_once('db_connect.php');
-
+	require_once('event.php');
 	?>
 		<ul>
 		<?php
-			foreach (mysqli_query($link, "SELECT name FROM `skater`") as $row) {
+			print("SELECT skater_name FROM `registration` where event_name='".$event."'");
+			print("ben");
+			foreach (mysqli_query($link, "SELECT skater_name FROM `registration` where event_name='".$event."'") as $row) {
 				?>
 					<li>
-						<?= $row['name'] ?>
+						<?= $row['skater_name'] ?>
 					</li>
 				<?php
 			}
+
 		?>
 		</ul>
 	<?php
 ?>
-<br />
-this will evenutally be a page to register a skater
