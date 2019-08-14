@@ -7,7 +7,12 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("button").click(function(){
-			$.ajax("record.php?event_num=<?= $_GET['event_num'] ?>&skater_num=<?= $_GET['skater_num'] ?>");
+			$.ajax({
+				url : "record.php?event_num=<?= $_GET['event_num'] ?>&skater_num=<?= $_GET['skater_num'] ?>",
+				success : function() {
+					$(".output").text("123")
+				}
+			});
 		});
 	});
 </script>
@@ -16,3 +21,4 @@
 <?= $result['skater_name'] ?>
 <br />
 <button class="w3-button w3-jumbo">LAP</button>
+<span class="output"></span>
