@@ -7,7 +7,9 @@
 		foreach (mysqli_query($link, "SELECT skater_num, name as skater_name FROM `registration` join skater on skater.num = skater_num where event_num='".$_GET['event_num']."'") as $row) {
 			?>
 				<li>
-					<?= $row['skater_name'] ?>
+					<a href="track.php?event_num=<?= $_GET['event_num']?>&skater_num=<?= $row['skater_num'] ?>">
+						<?= $row['skater_name'] ?>
+					</a>
 				</li>
 			<?php
 		}
