@@ -6,7 +6,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("button").click(function(){
-			$.ajax("db_connect.php");
+			$.ajax("record.php?event_num=<?= $_GET['event_num'] ?>&skater_num=<?= $_GET['skater_num'] ?>");
 		});
 	});
 </script>
