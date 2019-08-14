@@ -9,8 +9,8 @@
 		$("button").click(function(){
 			$.ajax({
 				url : "record.php?event_num=<?= $_GET['event_num'] ?>&skater_num=<?= $_GET['skater_num'] ?>",
-				success : function() {
-					$(".output").text("123")
+				success : function(value) {
+					$(".output").text(value)
 				}
 			});
 		});
