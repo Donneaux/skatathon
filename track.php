@@ -11,6 +11,8 @@
 		});
 	});
 </script>
-<?= $_GET['event_num'] ?><br /><?= $_GET['skater_num'] ?>
-<?= $result['event_name'] ?><br /><?= $result['skater_name'] ?>
+<?= $result['event_name'] ?>
+<br />
+<?= $result['skater_name'] ?>
+<br />
 <button class="w3-button w3-jumbo">LAP</button>
