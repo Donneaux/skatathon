@@ -26,4 +26,4 @@
 <?= $result['skater_name'] ?>
 <br />
 <button class="w3-button w3-jumbo">LAP</button>
-<span class="output"></span>
+<span class="output"><?= $result['count']?></span>
