@@ -16,9 +16,11 @@
 	?>
 </ul>
 <form>
-<input type="text" name="name" />
-<input type="submit" formaction="register.php" />
-<input type="hidden" name="event_num" value=<?=$_GET['event_num']?>/>
+	<input type="hidden" name="event_num" value=<?=$_GET['event_num']?> />
+	name <input type="text" name="name" /><br />
+	sponsorship <input type="text" name="sponsorship" /><br />
+	laps <input type="text" name="laps" /><br />
+	<input type="submit" formaction="register.php" />
 </form>
 
 <?php
