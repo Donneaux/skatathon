@@ -5,7 +5,7 @@
 	header("Pragma: no-cache");
 
 	require_once('db_connect.php');
-	$result = mysqli_query($link, "select event.name as event_name, skater.name as skater_name from event,skater where (event.num, skater.num) = (".$_GET['event_num'].", ".$_GET['skater_num'].")") -> fetch_assoc();
+	$result = mysqli_query($link, "select event.name as event_name, skater.name as skater_name, count(*) as count from lap join event on event_num = event.num join skater on skater_num = skater.num where (event.num, skater.num) = (".$_GET['event_num'].", ".$_GET['skater_num'].")") -> fetch_assoc();
 ?>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
