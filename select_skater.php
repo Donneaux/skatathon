@@ -15,5 +15,11 @@
 		}
 	?>
 </ul>
+<form>
+<input type="text" name="name" />
+<input type="submit" formaction="register.php" />
+<input type="hidden" name="event_num" value=<?=$_GET['event_num']?>/>
+</form>
+
 <?php
 ?>
