@@ -1,4 +1,9 @@
 <?php
+
+	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Pragma: no-cache");
+
 	require_once('db_connect.php');
 	$result = mysqli_query($link, "select event.name as event_name, skater.name as skater_name from event,skater where (event.num, skater.num) = (".$_GET['event_num'].", ".$_GET['skater_num'].")") -> fetch_assoc();
 ?>
